@@ -6,6 +6,16 @@
   </head>
   <body>
     <h1>КАТАЛОГ ТОВАРІВ</h1>
+    <form method="post" >
+      <select name="category" id="">
+        <option value="all">Усі</option>
+        <option value="phone">Смартфони</option>
+        <option value="tablet">Планшети</option>
+      </select>
+      <button>Фільтрувати</button>
+    </form> 
+    
+ 
     {% for product in list_products %}
       <h2>{{product.name}}</h2>
       <h3>{{product.price}}$</h3>
