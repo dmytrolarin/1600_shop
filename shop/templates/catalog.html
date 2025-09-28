@@ -6,20 +6,20 @@
   </head>
   <body>
     <h1>КАТАЛОГ ТОВАРІВ</h1>
-    <form method="post" >
+    <form method="post">
       <select name="category" id="">
         <option value="all">Усі</option>
         <option value="phone">Смартфони</option>
         <option value="tablet">Планшети</option>
       </select>
       <button>Фільтрувати</button>
-    </form> 
-    
- 
+    </form>
+
     {% for product in list_products %}
       <h2>{{product.name}}</h2>
-      <h3>{{product.price}}$</h3>
-      <hr>
+      <h3>{{product.price}} грн</h3>
+      <a href="/create-payment?product_id={{product.id}}">Купити </a>
+      <hr />
     {% endfor %}
   </body>
 </html>
